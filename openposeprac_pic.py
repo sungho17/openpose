@@ -13,14 +13,17 @@ POSE_PAIRS = [ ["Head", "Neck"], ["Neck", "RShoulder"], ["RShoulder", "RElbow"],
                 ["RKnee", "RAnkle"], ["Chest", "LHip"], ["LHip", "LKnee"], ["LKnee", "LAnkle"] ]
     
 # 각 파일 path
-protoFile = "D:\\python_D\\fashion_data\\pose_deploy_linevec_faster_4_stages.prototxt"
-weightsFile = "D:\\python_D\\fashion_data\\pose_iter_160000.caffemodel"
- 
+#protoFile = "D:\\python_D\\fashion_data\\pose_deploy_linevec_faster_4_stages.prototxt"
+#weightsFile = "D:\\python_D\\fashion_data\\pose_iter_160000.caffemodel"
+
+protoFile = "C:/Users/sungh/prac/openpose/pose_deploy_linevec_faster_4_stages.prototxt"
+weightsFile = "C:/Users/sungh/prac/openpose/pose_iter_160000.caffemodel"
+
 # 위의 path에 있는 network 불러오기
 net = cv2.dnn.readNetFromCaffe(protoFile, weightsFile)
 
 # 이미지 읽어오기
-image = cv2.imread("D:\\python_D\\fashion_data\\full_body7.png")
+image = cv2.imread("C:/Users/sungh/prac/openpose/test1.png")
 
 # frame.shape = 불러온 이미지에서 height, width, color 받아옴
 imageHeight, imageWidth, _ = image.shape
